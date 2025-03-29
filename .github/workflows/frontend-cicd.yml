@@ -3,19 +3,22 @@ name: Upload website to S3
 on:
   push:
     branches:
-    - main
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - uses: jakejarvis/s3-sync-action@master
-      with:
-        args: --acl private-read --follow-symlinks --delete
-    env:
-      AWS_S3_BUCKET: alois-cloud-resume-challenge
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      AWS_REGION: eu-south-1
-      SOURCE_DIR: 'website'
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Sync Website Files to S3
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: alois-cloud-resume-challenge
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: eu-south-1
+          SOURCE_DIR: 'website'
