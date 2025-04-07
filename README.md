@@ -1,6 +1,7 @@
-# My AWS Cloud Resume Challenge
+# AWS Cloud Resume Challenge
+[![Upload Website](https://github.com/thabziey/aws-cloud-resume-challenge/actions/workflows/frontend-cicd.yml/badge.svg)](https://github.com/thabziey/aws-cloud-resume-challenge/actions/workflows/frontend-cicd.yml)
 
-[What is Cloud Resume Challenge?](https://cloudresumechallenge.dev/docs/the-challenge/aws/)
+[What is the Cloud Resume Challenge?](https://cloudresumechallenge.dev/docs/the-challenge/aws/)
 
 
 ## About The Project
