@@ -15,7 +15,7 @@ The challenge breakdown:
 
 ## Architecture
 
-![Architecture Diagram](/img/aws-architecture.jpg)
+![Architecture Diagram](/img/aws-cloud-architecture.jpg)
 
 
 ### Services Used:
